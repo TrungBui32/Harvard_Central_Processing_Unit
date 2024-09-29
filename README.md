@@ -37,3 +37,7 @@ Stores the instructions to be executed by the CPU and provides them based on the
 
 ### data_memory
 Handles data storage and retrieval operations, supporting memory read and write functions.
+
+## Schematic
+
+![Schematic](schematic_harvard_cpu_with_bin_file.pdf)
