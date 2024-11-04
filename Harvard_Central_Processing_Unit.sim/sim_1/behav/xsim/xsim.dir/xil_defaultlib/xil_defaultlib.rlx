@@ -1,0 +1,9 @@
+0.6
+2018.2
+Jun 14 2018
+20:41:02
+C:/Users/admin/Learning/FPGA-projects/Harvard_Central_Processing_Unit/Harvard_Central_Processing_Unit.sim/sim_1/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,
+C:/Users/admin/Learning/FPGA-projects/Harvard_Central_Processing_Unit/Harvard_Central_Processing_Unit.srcs/sim_1/new/alu_tb.v,1730730836,verilog,,,,alu_tb,,,,,,,,
+C:/Users/admin/Learning/FPGA-projects/Harvard_Central_Processing_Unit/Harvard_Central_Processing_Unit.srcs/sim_1/new/data_memory_tb.v,1730729359,verilog,,,,data_memory_tb,,,,,,,,
+C:/Users/admin/Learning/FPGA-projects/Harvard_Central_Processing_Unit/Harvard_Central_Processing_Unit.srcs/sources_1/new/alu.v,1727617159,verilog,,C:/Users/admin/Learning/FPGA-projects/Harvard_Central_Processing_Unit/Harvard_Central_Processing_Unit.srcs/sim_1/new/alu_tb.v,,alu,,,,,,,,
+C:/Users/admin/Learning/FPGA-projects/Harvard_Central_Processing_Unit/Harvard_Central_Processing_Unit.srcs/sources_1/new/data_memory.v,1727583195,verilog,,C:/Users/admin/Learning/FPGA-projects/Harvard_Central_Processing_Unit/Harvard_Central_Processing_Unit.srcs/sim_1/new/data_memory_tb.v,,data_memory,,,,,,,,
