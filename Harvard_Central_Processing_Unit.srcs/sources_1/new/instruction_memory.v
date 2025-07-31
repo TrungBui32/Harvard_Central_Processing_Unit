@@ -27,11 +27,18 @@ module instruction_memory (
 );
     reg [15:0] mem [0:255];
     
+//    initial begin
+//        $readmemb("program.bin", mem); 
+//    end
+    integer i;
     initial begin
-        $readmemb("program.bin", mem); 
+    // Initialize memory with some values
+        for (i = 0; i < 256; i = i + 1) begin
+            mem[i] = 16'd0;
+            end
     end
     
-    always @(posedge clk) begin
+    always @* begin
         instruction <= mem[address];
     end
 endmodule

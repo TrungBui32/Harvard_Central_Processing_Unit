@@ -27,7 +27,6 @@ module cpu (
     output wire [15:0] debug_instruction,
     output wire [7:0] debug_accumulator
 );
-
     // Internal signals
     wire [15:0] instruction;
     wire [7:0] data_in;
@@ -40,7 +39,10 @@ module cpu (
     wire reg_write_enable;
     wire [2:0] reg_write_addr, reg_read_addr1, reg_read_addr2;
     wire [7:0] reg_read_data1, reg_read_data2;
-
+    
+    // Data memory input multiplexer
+//    wire [7:0] data_in_mux = mem_write_enable ? reg_read_data2 : data_out;
+    wire [7:0] data_in_mux = mem_write_enable ? reg_read_data2 : data_out;
     // Instantiate control unit
     control_unit cu (
         .clk(clk),
@@ -56,7 +58,7 @@ module cpu (
         .reg_read_addr2(reg_read_addr2),
         .debug_pc(debug_pc)
     );
-
+    
     // Instantiate ALU
     alu alu_unit (
         .clk(clk),
@@ -68,7 +70,7 @@ module cpu (
         .result(data_out),
         .debug_accumulator(debug_accumulator)
     );
-
+    
     // Instantiate register file
     register_file reg_file (
         .clk(clk),
@@ -81,28 +83,30 @@ module cpu (
         .read_data1(reg_read_data1),
         .read_data2(reg_read_data2)
     );
-
+    
     // Instantiate instruction memory
     instruction_memory imem (
         .clk(clk),
         .address(debug_pc),
         .instruction(instruction)
     );
-
+    
     // Instantiate data memory
     data_memory dmem (
         .clk(clk),
         .address(address),
         .write_enable(mem_write_enable),
         .read_enable(mem_read_enable),
-        .data_in(data_out),
+        .data_in(data_in_mux),
         .data_out(data_in)
     );
-
+    
+    // Connect address to ALU output
+    assign address = data_out;
+    
     // Multiplexer for register write data
     assign reg_write_data = mem_read_enable ? data_in : data_out;
-
+    
     // Debug output
     assign debug_instruction = instruction;
-
 endmodule

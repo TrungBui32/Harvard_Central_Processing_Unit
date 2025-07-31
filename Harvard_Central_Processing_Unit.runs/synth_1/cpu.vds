@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Mon Nov  4 21:51:29 2024
-# Process ID: 7084
+# Start of session at: Fri Aug  1 00:05:15 2025
+# Process ID: 26848
 # Current directory: C:/Users/admin/Learning/FPGA-projects/Harvard_Central_Processing_Unit/Harvard_Central_Processing_Unit.runs/synth_1
 # Command line: vivado.exe -log cpu.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cpu.tcl
 # Log file: C:/Users/admin/Learning/FPGA-projects/Harvard_Central_Processing_Unit/Harvard_Central_Processing_Unit.runs/synth_1/cpu.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 17840 
+INFO: Helper process launched with PID 26436 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:00 ; elapsed = 00:00:01 . Memory (MB): peak = 356.879 ; gain = 99.648
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 356.281 ; gain = 99.379
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'cpu' [C:/Users/admin/Learning/FPGA-projects/Harvard_Central_Processing_Unit/Harvard_Central_Processing_Unit.srcs/sources_1/new/cpu.v:23]
 INFO: [Synth 8-6157] synthesizing module 'control_unit' [C:/Users/admin/Learning/FPGA-projects/Harvard_Central_Processing_Unit/Harvard_Central_Processing_Unit.srcs/sources_1/new/control_unit.v:23]
@@ -27,34 +27,30 @@ INFO: [Synth 8-6155] done synthesizing module 'alu' (2#1) [C:/Users/admin/Learni
 INFO: [Synth 8-6157] synthesizing module 'register_file' [C:/Users/admin/Learning/FPGA-projects/Harvard_Central_Processing_Unit/Harvard_Central_Processing_Unit.srcs/sources_1/new/register_file.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'register_file' (3#1) [C:/Users/admin/Learning/FPGA-projects/Harvard_Central_Processing_Unit/Harvard_Central_Processing_Unit.srcs/sources_1/new/register_file.v:23]
 INFO: [Synth 8-6157] synthesizing module 'instruction_memory' [C:/Users/admin/Learning/FPGA-projects/Harvard_Central_Processing_Unit/Harvard_Central_Processing_Unit.srcs/sources_1/new/instruction_memory.v:23]
-INFO: [Synth 8-3876] $readmem data file 'program.bin' is read successfully [C:/Users/admin/Learning/FPGA-projects/Harvard_Central_Processing_Unit/Harvard_Central_Processing_Unit.srcs/sources_1/new/instruction_memory.v:31]
 INFO: [Synth 8-6155] done synthesizing module 'instruction_memory' (4#1) [C:/Users/admin/Learning/FPGA-projects/Harvard_Central_Processing_Unit/Harvard_Central_Processing_Unit.srcs/sources_1/new/instruction_memory.v:23]
 INFO: [Synth 8-6157] synthesizing module 'data_memory' [C:/Users/admin/Learning/FPGA-projects/Harvard_Central_Processing_Unit/Harvard_Central_Processing_Unit.srcs/sources_1/new/data_memory.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'data_memory' (5#1) [C:/Users/admin/Learning/FPGA-projects/Harvard_Central_Processing_Unit/Harvard_Central_Processing_Unit.srcs/sources_1/new/data_memory.v:23]
-WARNING: [Synth 8-3848] Net address in module/entity cpu does not have driver. [C:/Users/admin/Learning/FPGA-projects/Harvard_Central_Processing_Unit/Harvard_Central_Processing_Unit.srcs/sources_1/new/cpu.v:35]
 INFO: [Synth 8-6155] done synthesizing module 'cpu' (6#1) [C:/Users/admin/Learning/FPGA-projects/Harvard_Central_Processing_Unit/Harvard_Central_Processing_Unit.srcs/sources_1/new/cpu.v:23]
+WARNING: [Synth 8-3331] design instruction_memory has unconnected port clk
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 411.531 ; gain = 154.301
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 411.516 ; gain = 154.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 411.531 ; gain = 154.301
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 411.516 ; gain = 154.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-INFO: [Device 21-403] Loading part xc7a35tcpg236-1
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 411.531 ; gain = 154.301
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 411.516 ; gain = 154.613
 ---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Synth 8-5544] ROM "mem_write_enable" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "mem_read_enable" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "alu_op" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "immediate" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "reg_write_enable" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "reg_read_addr1" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "reg_read_addr2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/admin/Learning/FPGA-projects/Harvard_Central_Processing_Unit/Harvard_Central_Processing_Unit.srcs/sources_1/new/alu.v:39]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/admin/Learning/FPGA-projects/Harvard_Central_Processing_Unit/Harvard_Central_Processing_Unit.srcs/sources_1/new/alu.v:34]
 INFO: [Synth 8-5544] ROM "registers_reg[0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "registers_reg[1]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "registers_reg[2]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -63,9 +59,9 @@ INFO: [Synth 8-5544] ROM "registers_reg[4]" won't be mapped to Block RAM because
 INFO: [Synth 8-5544] ROM "registers_reg[5]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "registers_reg[6]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "registers_reg[7]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "mem" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "mem" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 411.531 ; gain = 154.301
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 411.516 ; gain = 154.613
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -82,23 +78,19 @@ Detailed RTL Component Info :
 	   2 Input      8 Bit       Adders := 1     
 	   3 Input      8 Bit       Adders := 1     
 +---Registers : 
-	               16 Bit    Registers := 1     
-	                8 Bit    Registers := 13    
+	                8 Bit    Registers := 11    
 	                4 Bit    Registers := 1     
 	                3 Bit    Registers := 3     
 	                1 Bit    Registers := 3     
-+---RAMs : 
-	               2K Bit         RAMs := 1     
 +---Muxes : 
-	  17 Input     16 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 3     
-	   4 Input      8 Bit        Muxes := 2     
-	   2 Input      3 Bit        Muxes := 2     
-	   6 Input      3 Bit        Muxes := 2     
-	   2 Input      2 Bit        Muxes := 1     
-	   6 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 14    
-	   6 Input      1 Bit        Muxes := 6     
+	 257 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 6     
+	   6 Input      8 Bit        Muxes := 1     
+	   7 Input      8 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 4     
+	   6 Input      3 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 11    
+	   6 Input      1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -109,7 +101,7 @@ Hierarchical RTL Component report
 Module cpu 
 Detailed RTL Component Info : 
 +---Muxes : 
-	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
 Module control_unit 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -120,21 +112,21 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 3     
 	                1 Bit    Registers := 3     
 +---Muxes : 
-	   2 Input      3 Bit        Muxes := 2     
-	   6 Input      3 Bit        Muxes := 2     
-	   2 Input      2 Bit        Muxes := 1     
-	   6 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 6     
-	   6 Input      1 Bit        Muxes := 6     
+	   2 Input      8 Bit        Muxes := 1     
+	   6 Input      8 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 4     
+	   6 Input      3 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 3     
+	   6 Input      1 Bit        Muxes := 3     
 Module alu 
 Detailed RTL Component Info : 
 +---Adders : 
 	   3 Input      8 Bit       Adders := 1     
 +---Registers : 
-	                8 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      8 Bit        Muxes := 2     
-	   4 Input      8 Bit        Muxes := 2     
+	   7 Input      8 Bit        Muxes := 1     
 Module register_file 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -143,16 +135,12 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit        Muxes := 8     
 Module instruction_memory 
 Detailed RTL Component Info : 
-+---Registers : 
-	               16 Bit    Registers := 1     
 +---Muxes : 
-	  17 Input     16 Bit        Muxes := 1     
+	 257 Input     16 Bit        Muxes := 1     
 Module data_memory 
 Detailed RTL Component Info : 
-+---Registers : 
-	                8 Bit    Registers := 1     
-+---RAMs : 
-	               2K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -170,34 +158,122 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM dmem/mem_reg to conserve power
-INFO: [Synth 8-3886] merging instance 'cu/alu_op_reg[3]' (FDC) to 'cu/alu_op_reg[2]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cu/alu_op_reg[2] )
-INFO: [Synth 8-3886] merging instance 'imem/instruction_reg[4]' (FD) to 'imem/instruction_reg[6]'
-INFO: [Synth 8-3886] merging instance 'imem/instruction_reg[5]' (FD) to 'imem/instruction_reg[8]'
-INFO: [Synth 8-3886] merging instance 'imem/instruction_reg[6]' (FD) to 'imem/instruction_reg[7]'
-INFO: [Synth 8-3886] merging instance 'cu/immediate_reg[4]' (FDCE) to 'cu/immediate_reg[7]'
-INFO: [Synth 8-3886] merging instance 'cu/immediate_reg[6]' (FDCE) to 'cu/immediate_reg[7]'
-WARNING: [Synth 8-3332] Sequential element (cu/alu_op_reg[2]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3917] design cpu has port debug_instruction[15] driven by constant 0
+WARNING: [Synth 8-3917] design cpu has port debug_instruction[14] driven by constant 0
+WARNING: [Synth 8-3917] design cpu has port debug_instruction[13] driven by constant 0
+WARNING: [Synth 8-3917] design cpu has port debug_instruction[12] driven by constant 0
+WARNING: [Synth 8-3917] design cpu has port debug_instruction[11] driven by constant 0
+WARNING: [Synth 8-3917] design cpu has port debug_instruction[10] driven by constant 0
+WARNING: [Synth 8-3917] design cpu has port debug_instruction[9] driven by constant 0
+WARNING: [Synth 8-3917] design cpu has port debug_instruction[8] driven by constant 0
+WARNING: [Synth 8-3917] design cpu has port debug_instruction[7] driven by constant 0
+WARNING: [Synth 8-3917] design cpu has port debug_instruction[6] driven by constant 0
+WARNING: [Synth 8-3917] design cpu has port debug_instruction[5] driven by constant 0
+WARNING: [Synth 8-3917] design cpu has port debug_instruction[4] driven by constant 0
+WARNING: [Synth 8-3917] design cpu has port debug_instruction[3] driven by constant 0
+WARNING: [Synth 8-3917] design cpu has port debug_instruction[2] driven by constant 0
+WARNING: [Synth 8-3917] design cpu has port debug_instruction[1] driven by constant 0
+WARNING: [Synth 8-3917] design cpu has port debug_instruction[0] driven by constant 0
+INFO: [Synth 8-3886] merging instance 'cu/mem_write_enable_reg' (FDC) to 'cu/reg_read_addr2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'cu/mem_read_enable_reg' (FDC) to 'cu/reg_read_addr2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'cu/reg_write_addr_reg[1]' (FDC) to 'cu/reg_read_addr2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'cu/reg_write_addr_reg[2]' (FDC) to 'cu/reg_read_addr2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'cu/reg_write_addr_reg[0]' (FDC) to 'cu/reg_read_addr2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'cu/immediate_reg[0]' (FDC) to 'cu/reg_read_addr2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'cu/immediate_reg[1]' (FDC) to 'cu/reg_read_addr2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'cu/immediate_reg[2]' (FDC) to 'cu/reg_read_addr2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'cu/immediate_reg[3]' (FDC) to 'cu/reg_read_addr2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'cu/immediate_reg[4]' (FDC) to 'cu/reg_read_addr2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'cu/immediate_reg[5]' (FDC) to 'cu/reg_read_addr2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'cu/immediate_reg[6]' (FDC) to 'cu/reg_read_addr2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'cu/alu_op_reg[3]' (FDC) to 'cu/reg_read_addr2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'cu/immediate_reg[7]' (FDC) to 'cu/reg_read_addr2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'cu/reg_read_addr2_reg[0]' (FDC) to 'cu/reg_read_addr2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'cu/reg_read_addr2_reg[1]' (FDC) to 'cu/reg_read_addr2_reg[2]'
+INFO: [Synth 8-3886] merging instance 'cu/reg_read_addr2_reg[2]' (FDC) to 'cu/reg_read_addr1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'cu/reg_read_addr1_reg[0]' (FDC) to 'cu/reg_read_addr1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'cu/reg_read_addr1_reg[1]' (FDC) to 'cu/reg_read_addr1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'cu/reg_read_addr1_reg[2]' (FDC) to 'cu/alu_op_reg[0]'
+INFO: [Synth 8-3886] merging instance 'cu/alu_op_reg[0]' (FDC) to 'cu/alu_op_reg[1]'
+INFO: [Synth 8-3886] merging instance 'cu/alu_op_reg[2]' (FDC) to 'cu/alu_op_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cu/alu_op_reg[1] )
+WARNING: [Synth 8-3332] Sequential element (cu/reg_write_enable_reg) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[7][7]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[7][6]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[7][5]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[7][4]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[7][3]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[7][2]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[7][1]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[7][0]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[6][7]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[6][6]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[6][5]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[6][4]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[6][3]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[6][2]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[6][1]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[6][0]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[5][7]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[5][6]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[5][5]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[5][4]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[5][3]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[5][2]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[5][1]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[5][0]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[4][7]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[4][6]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[4][5]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[4][4]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[4][3]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[4][2]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[4][1]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[4][0]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[3][7]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[3][6]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[3][5]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[3][4]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[3][3]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[3][2]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[3][1]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[3][0]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[2][7]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[2][6]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[2][5]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[2][4]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[2][3]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[2][2]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[2][1]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[2][0]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[1][7]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[1][6]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[1][5]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[1][4]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[1][3]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[1][2]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[1][1]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[1][0]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[0][7]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[0][6]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[0][5]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[0][4]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[0][3]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[0][2]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[0][1]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (reg_file/registers_reg[0][0]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (alu_unit/debug_accumulator_reg[7]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (alu_unit/debug_accumulator_reg[6]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (alu_unit/debug_accumulator_reg[5]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (alu_unit/debug_accumulator_reg[4]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (alu_unit/debug_accumulator_reg[3]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (alu_unit/debug_accumulator_reg[2]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (alu_unit/debug_accumulator_reg[1]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (alu_unit/debug_accumulator_reg[0]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (cu/alu_op_reg[1]) is unused and will be removed from module cpu.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 559.633 ; gain = 302.402
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 550.148 ; gain = 293.246
 ---------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP and Shift Register Reporting
----------------------------------------------------------------------------------
-
-Block RAM: Preliminary Mapping  Report (see note below)
-+-------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Module Name  | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
-+-------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|data_memory: | mem_reg    | 256 x 8(READ_FIRST)    | W |   | 256 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
-+-------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-
-Note: The tale above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP and Shift Register Reporting
----------------------------------------------------------------------------------
-INFO: [Synth 8-4480] The timing for the instance i_1/dmem/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -209,21 +285,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 559.633 ; gain = 302.402
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP and Shift Register Reporting
----------------------------------------------------------------------------------
-
-Block RAM: Final Mapping  Report
-+-------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Module Name  | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
-+-------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|data_memory: | mem_reg    | 256 x 8(READ_FIRST)    | W |   | 256 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
-+-------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP and Shift Register Reporting
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 550.148 ; gain = 293.246
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -234,9 +296,8 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4480] The timing for the instance dmem/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 559.633 ; gain = 302.402
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 550.148 ; gain = 293.246
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -260,7 +321,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 559.633 ; gain = 302.402
+Finished IO Insertion : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 550.148 ; gain = 293.246
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -273,7 +334,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 559.633 ; gain = 302.402
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 550.148 ; gain = 293.246
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -285,25 +346,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 559.633 ; gain = 302.402
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 550.148 ; gain = 293.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 559.633 ; gain = 302.402
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 550.148 ; gain = 293.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 559.633 ; gain = 302.402
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 550.148 ; gain = 293.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 559.633 ; gain = 302.402
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 550.148 ; gain = 293.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -316,44 +377,36 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+---------+------+
-|      |Cell     |Count |
-+------+---------+------+
-|1     |BUFG     |     1|
-|2     |CARRY4   |     2|
-|3     |LUT1     |     2|
-|4     |LUT2     |     8|
-|5     |LUT3     |    26|
-|6     |LUT4     |    20|
-|7     |LUT5     |     1|
-|8     |LUT6     |    52|
-|9     |MUXF7    |    15|
-|10    |RAMB18E1 |     1|
-|11    |FDCE     |   108|
-|12    |FDRE     |    13|
-|13    |IBUF     |     2|
-|14    |OBUF     |    32|
-+------+---------+------+
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT1 |     1|
+|3     |LUT2 |     2|
+|4     |LUT3 |     2|
+|5     |LUT4 |     1|
+|6     |LUT5 |     1|
+|7     |LUT6 |     2|
+|8     |FDCE |     8|
+|9     |IBUF |     2|
+|10    |OBUF |    32|
++------+-----+------+
 
 Report Instance Areas: 
-+------+-----------+-------------------+------+
-|      |Instance   |Module             |Cells |
-+------+-----------+-------------------+------+
-|1     |top        |                   |   283|
-|2     |  alu_unit |alu                |    18|
-|3     |  cu       |control_unit       |    87|
-|4     |  dmem     |data_memory        |     9|
-|5     |  imem     |instruction_memory |    14|
-|6     |  reg_file |register_file      |   120|
-+------+-----------+-------------------+------+
++------+---------+-------------+------+
+|      |Instance |Module       |Cells |
++------+---------+-------------+------+
+|1     |top      |             |    52|
+|2     |  cu     |control_unit |    17|
++------+---------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 559.633 ; gain = 302.402
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 550.148 ; gain = 293.246
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 559.633 ; gain = 302.402
-Synthesis Optimization Complete : Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 559.633 ; gain = 302.402
+Synthesis finished with 0 errors, 0 critical warnings and 91 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 550.148 ; gain = 293.246
+Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 550.148 ; gain = 293.246
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -361,11 +414,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-49 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+58 Infos, 91 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 654.977 ; gain = 410.605
+synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 648.363 ; gain = 404.348
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/admin/Learning/FPGA-projects/Harvard_Central_Processing_Unit/Harvard_Central_Processing_Unit.runs/synth_1/cpu.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file cpu_utilization_synth.rpt -pb cpu_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 654.977 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Nov  4 21:51:40 2024...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 648.363 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Aug  1 00:05:32 2025...

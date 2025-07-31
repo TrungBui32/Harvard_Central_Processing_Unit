@@ -28,8 +28,8 @@ module register_file (
     input wire [7:0] write_data,
     input wire [2:0] read_addr1,
     input wire [2:0] read_addr2,
-    output reg [7:0] read_data1,
-    output reg [7:0] read_data2
+    output wire [7:0] read_data1,
+    output wire [7:0] read_data2
 );
 
     reg [7:0] registers [0:7];
@@ -45,10 +45,25 @@ module register_file (
             registers[write_addr] <= write_data;
         end
     end
+    
+//    always @* begin
+//        if(write_enable) begin
+//            registers[write_addr] <= write_data;
+//        end
+//    end
 
-    always @* begin
-        read_data1 = registers[read_addr1];
-        read_data2 = registers[read_addr2];
-    end
+//    always @* begin
+//        read_data1 = registers[read_addr1];
+//        read_data2 = registers[read_addr2];
+//    end
+
+    assign read_data1 = registers[read_addr1];
+    assign read_data2 = registers[read_addr2];
+
+//always @(read_addr1, read_addr2, registers[0], registers[1], registers[2], 
+//         registers[3], registers[4], registers[5], registers[6], registers[7]) begin
+//    read_data1 = registers[read_addr1];
+//    read_data2 = registers[read_addr2];
+//end
 
 endmodule

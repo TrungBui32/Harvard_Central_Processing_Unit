@@ -40,13 +40,51 @@ module data_memory (
         end
     end
 
-    always @(posedge clk) begin
-        if (write_enable) begin
-            mem[address] <= data_in;
-        end
-        if (read_enable) begin
-            data_out <= mem[address];
-        end
-    end
+
+//    always @(posedge clk) begin
+//        // Read first (sees old value)
+//        if (read_enable) begin
+//            data_out = mem[address];  // Blocking assignment - happens immediately
+//        end else begin
+//            data_out = 8'd0;
+//        end
+//        // Write second (updates for next cycle)
+//        if (write_enable) begin
+//            mem[address] = data_in;   // Blocking assignment - happens after read
+//        end
+//    end
+   always @(*) begin
+     if (read_enable) begin
+         data_out = mem[address];
+     end else begin
+         data_out = 8'd0;
+     end
+ end
+ 
+ // Sequential write (on clock edge)
+ always @(posedge clk) begin
+     if (write_enable) begin
+         mem[address] <= data_in;
+     end
+ end
+    
+    
+//    always @(posedge clk) begin
+//        if (write_enable) begin
+//            mem[address] <= data_in;
+//        end else         if (read_enable) begin
+//                data_out <= mem[address];
+//            end else begin
+//                data_out <= 8'b0; 
+//            end
+//    end
+    
+//    always @* begin
+//        if (read_enable) begin
+//            data_out <= mem[address];
+//        end else begin
+//            data_out <= 8'b0; 
+//        end
+//    end
 
 endmodule

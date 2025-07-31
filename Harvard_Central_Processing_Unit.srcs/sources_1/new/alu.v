@@ -30,26 +30,23 @@ module alu (
     output reg [7:0] result,
     output reg [7:0] debug_accumulator
 );
+    always @(*) begin
+        case (alu_op)
+            4'b0000: result = immediate;        // Load immediate
+            4'b0001: result = operand1 + operand2; // Add
+            4'b0010: result = operand1 - operand2; // Subtract
+            4'b0011: result = operand1 & operand2; // AND
+            4'b0100: result = operand1;          // Pass operand1 (address)
+            4'b0101: result = operand2;          // Pass operand2 (store data)
+            default: result = operand1;
+        endcase
+    end
 
     always @(posedge clk or posedge reset) begin
         if (reset) begin
-            result <= 8'b0;
             debug_accumulator <= 8'b0;
         end else begin
-            case (alu_op)
-                4'b0000: result <= immediate; // Load immediate
-                4'b0001: result <= operand1 + operand2; // Add
-                4'b0010: result <= operand1 - operand2; // Subtract
-                4'b0011: result <= operand1 & operand2; // AND
-//                4'b0100: result <= operand1 | operand2; // OR
-//                4'b0101: result <= operand1 ^ operand2; // XOR
-//                4'b0110: result <= ~operand1; // NOT
-//                4'b0111: result <= operand1 << operand2[2:0]; // Shift left
-//                4'b1000: result <= operand1 >> operand2[2:0]; // Shift right
-                default: result <= operand1;
-            endcase
             debug_accumulator <= result;
         end
     end
-
 endmodule
