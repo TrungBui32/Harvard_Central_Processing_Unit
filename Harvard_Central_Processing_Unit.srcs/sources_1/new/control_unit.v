@@ -103,7 +103,7 @@ module control_unit (
                         alu_op <= 4'b0000;
                     end
                 endcase
-                                program_counter <= program_counter + 1;
+                program_counter <= program_counter + 1;
 
             end
         end
