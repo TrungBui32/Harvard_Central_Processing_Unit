@@ -45,25 +45,8 @@ module register_file (
             registers[write_addr] <= write_data;
         end
     end
-    
-//    always @* begin
-//        if(write_enable) begin
-//            registers[write_addr] <= write_data;
-//        end
-//    end
-
-//    always @* begin
-//        read_data1 = registers[read_addr1];
-//        read_data2 = registers[read_addr2];
-//    end
 
     assign read_data1 = registers[read_addr1];
     assign read_data2 = registers[read_addr2];
-
-//always @(read_addr1, read_addr2, registers[0], registers[1], registers[2], 
-//         registers[3], registers[4], registers[5], registers[6], registers[7]) begin
-//    read_data1 = registers[read_addr1];
-//    read_data2 = registers[read_addr2];
-//end
-
+    
 endmodule

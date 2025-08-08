@@ -23,19 +23,14 @@
 module instruction_memory (
     input wire clk,
     input wire [7:0] address,
-    output reg [15:0] instruction
+    output reg [32:0] instruction
 );
-    reg [15:0] mem [0:255];
+    reg [32:0] mem [0:255];
     
-//    initial begin
-//        $readmemb("program.bin", mem); 
-//    end
     integer i;
     initial begin
-    // Initialize memory with some values
-        for (i = 0; i < 256; i = i + 1) begin
-            mem[i] = 16'd0;
-            end
+    // Initialize memory with 0s
+        $readmemh("instruction_memory.hex", mem);
     end
     
     always @* begin

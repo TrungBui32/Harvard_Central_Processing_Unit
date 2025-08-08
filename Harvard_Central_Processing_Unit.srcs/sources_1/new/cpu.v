@@ -28,12 +28,12 @@ module cpu (
     output wire [7:0] debug_accumulator
 );
     // Internal signals
-    wire [15:0] instruction;
+    wire [31:0] instruction;
     wire [7:0] data_in;
     wire [7:0] data_out;
     wire [7:0] address;
     wire mem_write_enable, mem_read_enable;
-    wire [3:0] alu_op;
+    wire [4:0] alu_op;
     wire [7:0] immediate;
     wire [7:0] reg_write_data;
     wire reg_write_enable;
